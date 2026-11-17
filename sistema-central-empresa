@@ -1,0 +1,16 @@
+sistema-central-empresa/
+├── backend/
+│   ├── __init__.py
+│   ├── config.py            # Variables de entorno y validación con Pydantic
+│   ├── database.py          # Motor PostgreSQL, pool de conexiones y sesión ACID
+│   ├── models.py            # Tablas SQLModel, restricciones e historial de auditoría
+│   ├── security.py          # Hashing bcrypt, tokens JWT y guardianes RBAC
+│   ├── integrations.py      # Conectores: Odoo, Google Sheets, Outlook y Excel
+│   └── main.py              # API Central FastAPI, motor de KPIs y endpoints
+├── frontend/
+│   └── app.py               # Cliente Streamlit con vistas dinámicas por rol
+├── scripts/
+│   └── backup_db.py         # Respaldo automatizado pg_dump y verificación
+├── .env.example             # Plantilla de credenciales y secretos
+├── docker-compose.yml       # Orquestación del servidor y base de datos central
+└── requirements.txt         # Dependencias del proyecto
